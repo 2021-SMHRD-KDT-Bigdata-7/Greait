@@ -243,15 +243,7 @@ public class DAO {
 		} catch (Exception e) {
 			// TODO: handle exception
 		} finally {
-			try {
-				if (psmt != null) {
-					psmt.close();
-				}
-				if (conn != null) {
-					conn.close();
-				}
-			} catch (Exception e) {
-			}
+			close();
 		}
 		return vo;
 	}
